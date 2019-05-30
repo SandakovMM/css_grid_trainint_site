@@ -16,7 +16,7 @@ header {
 }
 
 header h1{
-    font-size: 3.25em;
+    font-size: 4em;
     text-align: center;
     color: white;
     margin-bottom: 20px;
@@ -25,25 +25,12 @@ header h1{
 
 nav {
     grid-area: nav;
-}
-
-input {
-    width: 85%;
-    color: darkblue;
-    background-color: aliceblue;
-    font-size: 1.25em;
-    padding: 5px;
-    margin-bottom: 10px;
-    text-align: center;
+    margin: 0 auto;
 }
 
 section{
     padding:10px;
     text-align: center;
-}
-
-section img {
-    max-width: 100%;
 }
 
 .options {
@@ -130,6 +117,35 @@ footer {
     text-align: center;
 }
 
+input {
+    width: 85%;
+    color: darkblue;
+    background-color: aliceblue;
+    font-size: 1.25em;
+    padding: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+section img {
+    max-width: 100%;
+}
+
+.btn {
+    display: inline-block;
+    background: #3498db;
+    border-radius: 20px;
+    color: white;
+    font-size: 15px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    margin-top: 2%;
+}
+
+.btn:hover {
+    background-color: #3cb0fd;
+}
+
 @media screen and (min-width: 1100px) {
     main {
         width: 90%;
@@ -137,7 +153,7 @@ footer {
     
         display: grid;
         grid-template-columns: 1fr 1fr 1fr; /* Show number of columns */
-        grid-template-rows: 10vh 4vh 38vh 38vh 10vh; /* Shuld be 100 in summ */
+        grid-template-rows: auto 4vh auto auto 10vh; /* Shuld be 100 in summ */
         grid-gap: 15px;
         margin: 0 auto;
     }
@@ -150,6 +166,12 @@ footer {
             "build_apps build_games build_websites"
             "footer footer footer"
     }
+
+    div {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
 }
 
 @media screen and (max-width: 1100px) {
@@ -159,7 +181,7 @@ footer {
     
         display: grid;
         grid-template-columns: 1fr 1fr; /* Show number of columns */
-        grid-template-rows: 10vh 4vh 25vh 25vh 25vh 10vh; /* Shuld be 100 in summ */
+        grid-template-rows: auto 4vh auto auto auto 10vh; /* Shuld be 100 in summ */
         grid-gap: 15px;
         margin: 0 auto;
     }
@@ -173,6 +195,35 @@ footer {
             "build_games build_websites"
             "footer footer"
     }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    section {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .profile {
+        width: 20%;
+    }
+
+    .graphs {
+        font-size: 90px;
+        margin: 3% 0 0;
+    }
+
+    div {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -182,7 +233,7 @@ footer {
     
         display: grid;
         grid-template-columns: 1fr; /* Show number of columns */
-        grid-template-rows: 10vh 6vh 14vh 14vh 14vh 14vh 14vh 14vh 5vh; /* Shuld be 100 in summ */
+        grid-template-rows: auto 20vh auto auto auto auto auto auto 20vh;
         grid-gap: 15px;
         margin: 0 auto;
     }
@@ -198,5 +249,34 @@ footer {
             "build_games"
             "build_websites"
             "footer"
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0;
+    }
+
+    header h1 {
+        font-size: 1.75em;
+        padding-top: 25px;
+    }
+
+    nav {
+        margin-top: 0;
+    }
+
+    .options {
+        font-size: 12px;
+    }
+
+    footer {
+        margin-bottom: 100px;
+    }
+
+    div {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
     }
 }
